@@ -2,3 +2,13 @@ GET http://localhost:3003/users
 
 ###
 GET http://localhost:3003/products
+
+###
+
+POST http://localhost:3003/total-value/1
+Content-Type: application/json
+
+{
+        "productsIds": [1,2,3,10,11]
+}
+
