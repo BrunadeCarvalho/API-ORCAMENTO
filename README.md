@@ -10,7 +10,6 @@
 <p> Endpoint que retorna todos os produtos cadastrados no banco de dados.</p>
 
 <h2>Valor final:</h2>
-<strong>
 <p> Endpoint que recebe o id do usuário e dos produtos selecionados e retorna o valor final a ser pago de acordo com a taxa de pagamento do usuário:</p>
 
 <ul>
