@@ -32,3 +32,6 @@
 mas esse usuário tem uma <strong>taxa de 79</strong> (irá pagar apenas 79% do valor), <strong>resultando em um valor final de 11348.354.</strong> </p>
 
 ### [Deploy](https://api-orcamento.onrender.com/)
+
+<h3> Tecnologias utilizadas </h3>
+  <img src="https://skillicons.dev/icons?i=ts&perline=10" />
