@@ -1,4 +1,5 @@
 import axios from "axios";
+import { CustomError } from "../error/CustomError";
 
 export async function getSpecificUser(userId:string) {
     try{
@@ -6,6 +7,6 @@ export async function getSpecificUser(userId:string) {
         
         return data
     }catch(error:any){
-        throw new Error(error.message)
+        throw new CustomError(error.statusCode, error.message)
     };    
 }
