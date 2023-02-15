@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { getProducts } from "../data/getProducts";
 import { getSpecificUser } from "../data/getSpecificUser";
+import { productsType } from "../model/productsType";
 
 export async function totalValue(req:Request, res: Response){
     const userId = req.params.userId
@@ -9,11 +10,11 @@ export async function totalValue(req:Request, res: Response){
         const allProducts = await getProducts()
 
         const user = await getSpecificUser(userId)
-        const filteredProducts = allProducts.filter((product:any) => productsIdsList.includes(product.id))
+        const filteredProducts = allProducts.filter((product:productsType) => productsIdsList.includes(product.id))
         if(productsIdsList.length > filteredProducts.length) {
             return res.status(404).send({"message": "at least one product was not found"})
         }
-        const totalWithoutTax = filteredProducts.reduce((accumulator:number, currentProduct:any) => accumulator + currentProduct.price, 0)
+        const totalWithoutTax = filteredProducts.reduce((accumulator:number, currentProduct:productsType) => accumulator + currentProduct.price, 0)
         const totalWithTax = Math.round(totalWithoutTax * (user.tax  / 100))
         const result = {
             totalWithoutTax,
