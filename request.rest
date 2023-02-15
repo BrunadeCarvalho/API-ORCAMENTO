@@ -9,6 +9,6 @@ POST http://localhost:3003/cart/6
 Content-Type: application/json
 
 {
-        "productsIds": [6,10]
+        "productsIds": [6,22]
 }
 
