@@ -10,8 +10,11 @@ export async function totalValue(req:Request, res: Response){
 
         const user = await getSpecificUser(userId)
         const filteredProducts = allProducts.filter((product:any) => productsIdsList.includes(product.id))
-        const totalWithoutTax = filteredProducts.reduce((accumulator:number, currentValue:any) => accumulator + currentValue.price, 0)
-        const totalWithTax = totalWithoutTax * (user.tax  / 100)
+        if(productsIdsList.length > filteredProducts.length) {
+            return res.status(404).send({"message": "at least one product was not found"})
+        }
+        const totalWithoutTax = filteredProducts.reduce((accumulator:number, currentProduct:any) => accumulator + currentProduct.price, 0)
+        const totalWithTax = Math.round(totalWithoutTax * (user.tax  / 100))
         const result = {
             totalWithoutTax,
             userTax: user.tax,
