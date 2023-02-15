@@ -1,5 +1,4 @@
 <h1 align="center">💵 API-ORÇAMENTO </h1>
-<p align="center">Teste técnico</p>
 
 <h2>Lista de usuários:</h2>
 <strong> /users </strong>
@@ -20,13 +19,13 @@
 </ul>
 
 <h3>URL</h3>
-<img src= "https://user-images.githubusercontent.com/102433664/218233148-976def25-9ef4-4830-a1e5-81ee68748d61.png" />
+<img src="https://user-images.githubusercontent.com/102433664/218914177-44ab21d3-460d-4c4b-80e8-2979a376a54d.png" />
 
 <h3>Body</h3>
 <img src="https://user-images.githubusercontent.com/102433664/218231416-4003ae6a-2b5a-476d-8642-f52454be83be.png" />
 
 <h3>Resultado</h3>
-<img src="https://user-images.githubusercontent.com/102433664/218231818-9c72c2e7-1a9c-4142-ac81-46e456cb94ff.png" />
+<img src="https://user-images.githubusercontent.com/102433664/218913901-9c382632-fcd8-48ba-8904-260b92801c54.png" />
 
 
 <p> O usuário <strong>1</strong> comprou os produtos com <strong>id: 1,2 e 3</strong>, que ao total <strong>somaria 14365</strong>,
